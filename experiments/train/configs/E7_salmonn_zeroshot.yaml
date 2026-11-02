@@ -1,0 +1,7 @@
+# E7_salmonn_zeroshot: vanilla SALMONN-7B, no fine-tuning (inference only; lora off -> pure SALMONN weights)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  timestamp_cond: false
+  ate: none
+  beats_align: pad
+  lora: false

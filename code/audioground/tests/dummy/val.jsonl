@@ -1,0 +1,2 @@
+{"id": "a0", "audio": "code/audioground/tests/dummy/a0.wav", "instruction": "When does the beeping tone occur?", "response": "The beeping tone occurs from 2.4 to 6.0 seconds.", "query": "a beeping tone", "spans": [[2.4, 6.0]]}
+{"id": "a1", "audio": "code/audioground/tests/dummy/a1.wav", "instruction": "When does the beeping tone occur?", "response": "The beeping tone occurs from 9.0 to 13.0 seconds.", "query": "a beeping tone", "spans": [[9.0, 13.0]]}

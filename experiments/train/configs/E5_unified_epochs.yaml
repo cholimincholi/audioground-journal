@@ -1,0 +1,4 @@
+# E5_unified_epochs: unified outputs, matched epochs (2.9448); identical to E0 when the dataset has 48.9K rows
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+train:
+  num_epochs: 2.9448

@@ -1,0 +1,7 @@
+# E5_grounding_only_epochs: grounding task only, matched epochs (2.9448)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+data:
+  tasks:
+  - grounding
+train:
+  num_epochs: 2.9448

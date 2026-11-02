@@ -1,0 +1,4 @@
+# E6b_auxspan: (b2) auxiliary span head (L1 + GIoU) on prompt-final hidden state, weight 0.5
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  aux_span_weight: 0.5

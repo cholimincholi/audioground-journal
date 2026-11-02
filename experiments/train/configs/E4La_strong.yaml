@@ -1,0 +1,9 @@
+# E4La_strong: data variant: AudioSet-Strong tightened labels
+# lead-data version of E4_strong (data variant: strong_lead)
+# ATE_l (learned absolute time embedding) version — use if ATE_l is adopted as the default
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/strong_lead/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/strong_lead/val.jsonl
+model:
+  ate: learned

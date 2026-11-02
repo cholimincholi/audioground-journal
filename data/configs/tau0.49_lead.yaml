@@ -1,0 +1,10 @@
+name: tau0.49_lead
+tau: 0.49
+junction: {mode: silence, gap: [0.3, 0.5]}
+len_weights:
+  grounding: [0.30, 0.28, 0.23, 0.17, 0.02]
+  duration:  [0.32, 0.28, 0.23, 0.15, 0.02]
+  ordering:  [0.17, 0.26, 0.27, 0.25, 0.05]
+  frequency: [0.18, 0.27, 0.27, 0.23, 0.05]
+span_weights: [0.14, 0.14, 0.17, 0.20, 0.35]
+lead: [0.5, 9.5]

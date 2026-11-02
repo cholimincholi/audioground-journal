@@ -1,0 +1,9 @@
+# E1L_fi_ts_sin: FI + timestamp + sinusoidal ATE
+# lead-data version of E1_fi_ts_sin (data variant: lead)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  timestamp_cond: true
+  ate: sin
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/val.jsonl

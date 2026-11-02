@@ -1,0 +1,6 @@
+# E7_salmonn_ft: vanilla SALMONN connector (zero-pad BEATs, no timestamp, no ATE) + same chunking, LoRA r32, same data/steps
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  timestamp_cond: false
+  ate: none
+  beats_align: pad

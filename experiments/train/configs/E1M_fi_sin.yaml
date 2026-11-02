@@ -1,0 +1,8 @@
+# E1M_fi_sin: as E1L_fi_sin on the mixed-junction construction (mixjunction_lead = v2 candidate)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  timestamp_cond: false
+  ate: sin
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/mixjunction_lead/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/mixjunction_lead/val.jsonl

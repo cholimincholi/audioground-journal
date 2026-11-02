@@ -1,0 +1,5 @@
+# E6d_shortspan_data: (d) data-side remedy: 'shortspan' dataset variant built by the data agent
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/shortspan/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/shortspan/val.jsonl

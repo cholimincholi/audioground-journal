@@ -1,0 +1,6 @@
+# E7_salmonn_ft_interp: E7 with frame-level interpolation (isolates temporal modules from FI)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  timestamp_cond: false
+  ate: none
+  beats_align: interp

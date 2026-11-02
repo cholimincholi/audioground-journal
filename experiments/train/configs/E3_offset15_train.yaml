@@ -1,0 +1,4 @@
+# E3_offset15_train: train with the chunk grid shifted by 15 s (boundary-shift control)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  chunk_offset_sec: 15.0

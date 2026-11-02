@@ -1,0 +1,27 @@
+# CPU smoke test: tiny random backbones, same code paths as the real model.
+_base_: audioground_7b.yaml
+model:
+  llama_path: ${oc.env:AG_ROOT}/code/audioground/tests/tiny/llama
+  whisper_path: ${oc.env:AG_ROOT}/code/audioground/tests/tiny/whisper
+  beats_path: ${oc.env:AG_ROOT}/code/audioground/tests/tiny/beats.pt
+  salmonn_ckpt: ${oc.env:AG_ROOT}/code/audioground/tests/tiny/salmonn_fake.pth
+  encoder_batch_size: 4
+data:
+  feature_cache: ""
+  train_jsonl: ${oc.env:AG_ROOT}/code/audioground/tests/dummy/train.jsonl
+  val_jsonl: ${oc.env:AG_ROOT}/code/audioground/tests/dummy/val.jsonl
+  num_workers: 2
+train:
+  device: cpu
+  precision: fp32
+  max_steps: 6
+  global_batch_size: 4
+  micro_batch_size: 2
+  warmup_steps: 2
+  log_every: 1
+  eval_every: 3
+  save_every: 3
+  output_dir: ${oc.env:AG_ROOT}/code/audioground/tests/out/train_tiny
+generate:
+  max_new_tokens: 12
+  batch_size: 2

@@ -1,0 +1,11 @@
+# E6La_oversample: curriculum oversampling of spans < 5 s, x3 decaying to x1, on the final setting (data lead = rho0 0%, FI + timestamp + ATE_l)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  timestamp_cond: true
+  ate: learned
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/val.jsonl
+  short_oversample_factor: 3.0
+  short_threshold_sec: 5.0
+  short_oversample_schedule: decay

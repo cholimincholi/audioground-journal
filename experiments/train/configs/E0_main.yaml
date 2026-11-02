@@ -1,0 +1,4 @@
+# E0_main: AudioGround default: FI + timestamp-conditioned Q-Former + hybrid ATE (paper config); full 1000-sample val
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+data:
+  max_val_samples: 1000

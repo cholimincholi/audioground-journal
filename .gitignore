@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+ckpt/
+cache/
+runs/
+.cache/
+data/raw/
+data/clips/
+data/emb/
+data/pools/
+data/audio_store/
+data/variants/
+eval/benchmarks/
+eval/third_party/
+eval/results/
+code/audioground/tests/tiny/
+code/audioground/tests/out/

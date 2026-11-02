@@ -1,0 +1,5 @@
+# E4_crossfade: data variant: crossfaded junctions
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/crossfade/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/crossfade/val.jsonl

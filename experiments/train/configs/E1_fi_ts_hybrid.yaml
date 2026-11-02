@@ -1,0 +1,5 @@
+# E1_fi_ts_hybrid: FI + timestamp + hybrid ATE (== E0_main; queue aliases it)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  timestamp_cond: true
+  ate: hybrid

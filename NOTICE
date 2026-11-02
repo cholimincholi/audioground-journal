@@ -1,0 +1,14 @@
+AudioGround
+Copyright 2026 Mingi Kim, Minchol Kwon, Junyeong Kim (Chung-Ang University)
+
+This repository includes code from the following projects, which keep their original licenses:
+
+- code/audioground/audioground/Qformer.py
+  Adapted from Salesforce LAVIS (via SALMONN). Copyright (c) 2023, salesforce.com, inc.
+  BSD 3-Clause License, https://opensource.org/licenses/BSD-3-Clause
+
+- code/audioground/audioground/beats/
+  BEATs, https://github.com/microsoft/unilm/tree/master/beats. Copyright (c) 2022 Microsoft.
+  MIT License.
+
+The AudioGround model builds on SALMONN (https://github.com/bytedance/SALMONN, Apache License 2.0).

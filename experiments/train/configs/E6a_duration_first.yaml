@@ -1,0 +1,4 @@
+# E6a_duration_first: (a) explicit duration-first output: 'The event lasts D seconds. <response>'
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+data:
+  response_format: duration_first

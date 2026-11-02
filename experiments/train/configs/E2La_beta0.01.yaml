@@ -1,0 +1,10 @@
+# E2La_beta0.01: beta init 0.01 (0.05 == E0_main)
+# lead-data version of E2_beta0.01 (data variant: lead)
+# ATE_l (learned absolute time embedding) version — use if ATE_l is adopted as the default
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  ate_beta_init: 0.01
+  ate: learned
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/val.jsonl

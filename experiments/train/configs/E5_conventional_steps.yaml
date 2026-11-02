@@ -1,0 +1,5 @@
+# E5_conventional_steps: all tasks with conventional task-specific outputs, matched steps
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/conventional/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/conventional/val.jsonl

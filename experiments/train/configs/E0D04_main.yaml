@@ -1,0 +1,6 @@
+# E0D04_main: AudioGround (ATE_h) on the lead04 dose-response variant
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead04/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead04/val.jsonl
+  max_val_samples: 1000

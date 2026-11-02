@@ -1,0 +1,10 @@
+# E5L_grounding_only_epochs: grounding task only, matched epochs (2.9448)
+# lead-data version of E5_grounding_only_epochs (data variant: lead)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+data:
+  tasks:
+  - grounding
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/val.jsonl
+train:
+  num_epochs: 2.9448

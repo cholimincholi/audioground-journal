@@ -1,0 +1,9 @@
+# E1L_fi_hybrid: FI + hybrid ATE (no timestamp)
+# lead-data version of E1_fi_hybrid (data variant: lead)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  timestamp_cond: false
+  ate: hybrid
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/val.jsonl

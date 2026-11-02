@@ -1,0 +1,6 @@
+# E2_W1.0_NQ1: window = stride = 1.0s, N_Q = 1
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  window_sec: 1.0
+  stride_sec: 1.0
+  num_query_token: 1

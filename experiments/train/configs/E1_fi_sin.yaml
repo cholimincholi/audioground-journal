@@ -1,0 +1,5 @@
+# E1_fi_sin: FI + sinusoidal ATE (no timestamp)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  timestamp_cond: false
+  ate: sin

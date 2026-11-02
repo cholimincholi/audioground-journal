@@ -1,0 +1,9 @@
+# E6La_duration_first: duration-first output 'The event lasts D seconds. <response>', on the final setting (data lead = rho0 0%, FI + timestamp + ATE_l)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  timestamp_cond: true
+  ate: learned
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/val.jsonl
+  response_format: duration_first

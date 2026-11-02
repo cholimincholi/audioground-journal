@@ -1,0 +1,6 @@
+# E6c_oversample: (c) curriculum oversampling of spans < 5 s: x3 decaying to x1 over training
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+data:
+  short_oversample_factor: 3.0
+  short_threshold_sec: 5.0
+  short_oversample_schedule: decay

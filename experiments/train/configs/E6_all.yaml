@@ -1,0 +1,10 @@
+# E6_all: (a)+(b1)+(b2)+(c) combined
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  aux_span_weight: 0.5
+data:
+  response_format: duration_first
+  loss_reweight: inv_duration
+  short_oversample_factor: 3.0
+  short_threshold_sec: 5.0
+  short_oversample_schedule: decay

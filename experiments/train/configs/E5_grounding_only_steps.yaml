@@ -1,0 +1,5 @@
+# E5_grounding_only_steps: grounding task only, matched total steps (6000)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+data:
+  tasks:
+  - grounding

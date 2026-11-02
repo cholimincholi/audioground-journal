@@ -1,0 +1,12 @@
+# E2La_W1.0_NQ1: window = stride = 1.0s, N_Q = 1
+# lead-data version of E2_W1.0_NQ1 (data variant: lead)
+# ATE_l (learned absolute time embedding) version — use if ATE_l is adopted as the default
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  window_sec: 1.0
+  stride_sec: 1.0
+  num_query_token: 1
+  ate: learned
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/val.jsonl

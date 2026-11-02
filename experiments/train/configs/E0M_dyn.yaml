@@ -1,0 +1,8 @@
+# E0M_dyn: training-dynamics run of E0M_main (v2.1, lead on 90% of samples), checkpoint every 500 steps
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead09/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead09/val.jsonl
+  max_val_samples: 1000
+train:
+  keep_ckpt_every: 500

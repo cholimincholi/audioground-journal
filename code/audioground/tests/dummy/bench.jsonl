@@ -1,0 +1,6 @@
+{"id": "a0", "audio": "code/audioground/tests/dummy/a0.wav", "query": "a beeping tone", "spans": [[2.4, 6.0]]}
+{"id": "a1", "audio": "code/audioground/tests/dummy/a1.wav", "query": "a beeping tone", "spans": [[9.0, 13.0]]}
+{"id": "a2", "audio": "code/audioground/tests/dummy/a2.wav", "query": "a beeping tone", "spans": [[15.1, 19.1]]}
+{"id": "a3", "audio": "code/audioground/tests/dummy/a3.wav", "query": "a beeping tone", "spans": [[6.0, 10.0]]}
+{"id": "a4", "audio": "code/audioground/tests/dummy/a4.wav", "query": "a beeping tone", "spans": [[12.2, 16.2]]}
+{"id": "a5", "audio": "code/audioground/tests/dummy/a5.wav", "query": "a beeping tone", "spans": [[1.6, 4.0]]}

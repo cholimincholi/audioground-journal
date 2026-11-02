@@ -1,0 +1,5 @@
+# E4_tau0.41: data variant: similarity threshold tau = 0.41
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/tau0.41/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/tau0.41/val.jsonl

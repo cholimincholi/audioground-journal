@@ -1,0 +1,10 @@
+# E7L_salmonn_ft: vanilla SALMONN connector (zero-pad BEATs, no timestamp, no ATE) + same chunking, LoRA r32, same data/steps
+# lead-data version of E7_salmonn_ft (data variant: lead)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  timestamp_cond: false
+  ate: none
+  beats_align: pad
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/val.jsonl

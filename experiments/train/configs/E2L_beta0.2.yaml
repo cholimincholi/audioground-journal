@@ -1,0 +1,8 @@
+# E2L_beta0.2: beta init 0.2 (0.05 == E0_main)
+# lead-data version of E2_beta0.2 (data variant: lead)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  ate_beta_init: 0.2
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/val.jsonl

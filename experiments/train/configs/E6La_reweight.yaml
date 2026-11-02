@@ -1,0 +1,12 @@
+# E6La_reweight: short-target loss reweighting w = clip((10/dur)^0.5, 1, 4), on the final setting (data lead = rho0 0%, FI + timestamp + ATE_l)
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  timestamp_cond: true
+  ate: learned
+data:
+  train_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/train.jsonl
+  val_jsonl: ${oc.env:AG_DATA_ROOT,${oc.env:AG_ROOT}/data}/variants/lead/val.jsonl
+  loss_reweight: inv_duration
+  reweight_ref_sec: 10.0
+  reweight_gamma: 0.5
+  reweight_max: 4.0

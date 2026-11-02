@@ -1,0 +1,25 @@
+# AudioGround paper default (7B). All keys/defaults are in audioground/config.py; this file pins the spec.
+model:
+  llama_path: ${oc.env:AG_ROOT}/ckpt/vicuna-7b-v1.5
+  salmonn_ckpt: ${oc.env:AG_ROOT}/ckpt/salmonn_7b/salmonn_7b_v0.pth
+  chunk_sec: 30.0
+  window_sec: 0.333333
+  stride_sec: 0.333333
+  num_query_token: 1
+  timestamp_cond: true
+  ate: hybrid
+  ate_beta_init: 0.05
+  beats_align: interp
+  lora_rank: 32
+  lora_alpha: 64
+train:
+  max_steps: 6000
+  global_batch_size: 24
+  micro_batch_size: 3
+  lr: 3.0e-5
+  warmup_steps: 100
+  precision: bf16
+generate:
+  num_beams: 4
+  do_sample: false
+  max_new_tokens: 100

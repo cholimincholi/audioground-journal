@@ -1,0 +1,5 @@
+# E3_overlap_train: train + infer with overlapping 30 s chunks, hop 20 s (10 s overlap), centre-weighted merge
+_base_: ../../../code/audioground/configs/audioground_7b.yaml
+model:
+  chunk_hop_sec: 20.0
+  overlap_merge: center
