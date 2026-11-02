@@ -1,4 +1,4 @@
-"""Sensitivity to the design and data choices (Section V-F): one panel per varied choice, seed 0, Original setting.
+"""Sensitivity to the design and data choices (Section V-G): one panel per varied choice, seed 0, Original setting.
 Values are the R1@0.5 / R1@0.7 of the sensitivity runs (unified protocol); the default is AudioGround seed 0.
 usage: python eval/scripts/plot_sensitivity.py [--out paper_v2/Figures/sensitivity.pdf]
 """
